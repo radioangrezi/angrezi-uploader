@@ -32,7 +32,6 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "@uppy/core": "^1.10.2",
-    "@uppy/locales": "^1.13.1",
     "core-js": "^3.6.5",
     "uppy": "^1.13.2"
   }
