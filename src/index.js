@@ -25,10 +25,7 @@ const uppy = Uppy({
   note: 'We only accept audiofiles.',
   width: "calc(100vw - 20px)",
   height: "calc(100vh - 20px)",
-  metaFields: [
-    { id: 'name', name: 'Name', placeholder: 'file name' },
-    { id: 'caption', name: 'Caption', placeholder: 'describe what the image is about' }
-  ],
+  metaFields: [],
   browserBackButtonClose: true
 })
 .use(Tus, { endpoint: 'http://upload.radioangrezi.de/files/' })
