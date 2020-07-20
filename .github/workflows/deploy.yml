@@ -44,7 +44,7 @@ jobs:
       - run: npm test
      
       - name: make deploy script executable
-      - run: chmod +x ./gradlew
+      - run: chmod +x ./deploy.sh
 
       - name: run deploy script
         run: ./deploy.sh
