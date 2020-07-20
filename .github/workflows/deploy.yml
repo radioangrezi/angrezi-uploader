@@ -31,14 +31,13 @@ jobs:
         uses: actions/cache@v1
         id: cache_node_modules
         with:
-          path: frontend/node_modules
-          key: frontend-node_modules-${{ hashFiles('frontend/package-lock.json') }}
-          restore-keys: frontend-node_modules-
+          path: node_modules
+          key: node_modules-${{ hashFiles('frontend/package-lock.json') }}
+          restore-keys: node_modules-
 
       - name: Install Dependencies
         if: steps.cache_node_modules.outputs.cache-hit != 'true'
         run: npm install
-        working-directory: frontend/
         
       - run: npm ci
       - run: npm run build --if-present
