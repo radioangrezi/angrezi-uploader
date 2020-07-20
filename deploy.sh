@@ -1,3 +1,4 @@
+#!/bin/sh
 # run as angrezi user
 
 # remove all files 
