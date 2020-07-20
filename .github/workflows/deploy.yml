@@ -42,9 +42,6 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-     
-      - name: make deploy script executable
-        run: chmod +x ./deploy.sh
 
       - name: run deploy script
-        run: ./deploy.sh
+        run: /opt/services/${{ github.event.repository.name }}/deploy.sh
