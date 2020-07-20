@@ -44,4 +44,4 @@ jobs:
       - run: npm test
   
       - name: run deploy script
-        run: /opt/services/${{ github.event.repository.name }}/deploy.sh
+        run: sudo /opt/services/${{ github.event.repository.name }}/deploy.sh
