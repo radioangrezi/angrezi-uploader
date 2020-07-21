@@ -1,15 +1,19 @@
 #!/bin/bash
+
+# accessible var DEPLOY_REPO_NAME
+# accessible var DEPLOY_DEST
+# accessible var DEPLOY_FROM
+
 # run as angrezi user
-REPO_NAME=angrezi-uploader
-DIST=/opt/services/$REPO_NAME/run
 SERVICE_USER=www-data
+
 # remove all files
-sudo rm -rf $DIST
-sudo mkdir $DIST
+sudo rm -rf $DEPLOY_DEST
+sudo mkdir $DEPLOY_DEST
 
 # copy application files
-sudo cp -R /var/github/actions-runner/_work/$REPO_NAME/$REPO_NAME/dist/* $DIST/
+sudo cp -R $DEPLOY_FROM/dist/* $DEPLOY_DEST
 
 # chown by user
-sudo chown -R $SERVICE_USER:$SERVICE_USER $DIST
+sudo chown -R $SERVICE_USER:$SERVICE_USER $DEPLOY_DEST
 # restart apache vhost?
