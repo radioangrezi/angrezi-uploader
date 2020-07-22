@@ -22,7 +22,7 @@ const uppy = Uppy({
   target: '.uppy-dashboard-container',
   replaceTargetContent: true,
   showProgressDetails: true,
-  note: 'We only accept audiofiles.',
+  note: 'We currently only accept audiofiles.',
   width: "calc(100vw - 20px)",
   height: "calc(100vh - 20px)",
   metaFields: [],
